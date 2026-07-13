@@ -362,7 +362,7 @@ export default function App() {
             { label: "covenant", id: "covenant-religion" },
             { label: "library", id: "scripture-library" },
             { label: "vacancies", id: "vacancies" },
-            { label: "fibi's journal", url: "https://x.com" }
+            { label: "fibi's journal", url: "https://x.com/gffibi" }
           ].map((item, idx) => {
             if ("url" in item) {
               return (

@@ -1,0 +1,6 @@
+{
+  "name": "Febu Portal",
+  "description": "An interactive portal to FEBU, now beautifully decorated by FIBI. Explore digital fairy aesthetics, cyber terminals, and existential trends under pink scanlines.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

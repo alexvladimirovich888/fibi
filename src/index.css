@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-primary-pink: #ed8fa7;
+  --color-light-pink: #f7c6d4;
+  --color-soft-pink: #ffdbe7;
+  --color-dark-rose: #c76686;
+  --color-bg-dark: #ffdbe7; /* Inverted: pink is now the background! */
+  --color-bg-secondary: #fff0f3; /* Warm blush/white secondary bg */
+  --color-border-pink: #831843; /* Deep burgundy/dark plum border */
+}
+
+/* Custom styles for retro/brutalist elements */
+.hazard-stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    #ffdbe7,
+    #ffdbe7 12px,
+    #831843 12px,
+    #831843 24px
+  );
+}
+
+.glow-pink {
+  text-shadow: 0 0 6px rgba(131, 24, 67, 0.25);
+}
+
+.glow-pink-lg {
+  text-shadow: 0 0 10px rgba(131, 24, 67, 0.35);
+}
+
+.box-glow {
+  box-shadow: 0 0 15px rgba(237, 143, 167, 0.4);
+  border-color: rgba(131, 24, 67, 0.8);
+}
+
+.crt-scanlines {
+  position: relative;
+  overflow: hidden;
+}
+
+.crt-scanlines::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(255, 221, 231, 0) 50%, rgba(131, 24, 67, 0.05) 50%);
+  background-size: 100% 4px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.crt-flicker {
+  animation: crt-flicker 0.4s infinite;
+}
+
+@keyframes crt-flicker {
+  0% { opacity: 0.995; }
+  50% { opacity: 1; }
+  100% { opacity: 0.995; }
+}
+
+/* Custom scrollbar for terminal/retro design */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #ffdbe7;
+}
+::-webkit-scrollbar-thumb {
+  background: #fff0f3;
+  border: 2px solid #831843;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ed8fa7;
+}
+
+/* Custom cursor or subtle background anims */
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(1); opacity: 0.95; }
+  50% { transform: scale(1.01); opacity: 1; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.4; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.animate-sparkle {
+  animation: sparkle 2s infinite ease-in-out;
+}
+
+
